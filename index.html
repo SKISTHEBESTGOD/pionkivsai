@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Pionki vs AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --bg: #0f1220;
+      --panel: #171a2e;
+      --accent: #4da3ff;
+      --accent2: #ff5252;
+      --text: #e8eaf6;
+      --muted: #aab0d6;
+      --border: #2a2f55;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI", system-ui, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #1a1f3a, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      color: var(--muted);
+      max-width: 720px;
+      margin: 1rem auto 0;
+      font-size: 1.1rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--panel), #12142a);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      background: rgba(77,163,255,0.15);
+      color: var(--accent);
+      margin-right: 0.4rem;
+    }
+
+    .badge.red {
+      background: rgba(255,82,82,0.15);
+      color: var(--accent2);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.9rem 1.6rem;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), #2f6bff);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1rem;
+      box-shadow: 0 8px 25px rgba(77,163,255,0.4);
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      box-shadow: none;
+    }
+
+    code, pre {
+      background: #0b0d1a;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+      display: block;
+      overflow-x: auto;
+      color: #b6c2ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Pionki vs AI</h1>
+  <p>
+    Turowa gra planszowa napisana w Pythonie, w której walczysz z przeciwnikiem AI
+    o skalowanej inteligencji – od trybu relaksacyjnego po bezlitosny „ultimate”.
+  </p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🎮 O grze</h2>
+    <p>
+      <strong>Pionki vs AI</strong> to strategiczna gra turowa na planszy,
+      w której każda decyzja ma znaczenie. Pionki posiadają punkty życia,
+      plansza ma zmienny rozmiar, a przeciwnik komputerowy aktywnie analizuje sytuację.
+    </p>
+    <span class="badge">Python</span>
+    <span class="badge">AI</span>
+    <span class="badge">Turn-based</span>
+    <span class="badge red">Ultimate Difficulty</span>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h2>🧠 AI & Trudność</h2>
+      <ul>
+        <li>Easy – losowe, wybaczające błędy</li>
+        <li>Normal / Hard – heurystyki i presja</li>
+        <li>Harder / Extreme – przewidywanie ruchów</li>
+        <li><strong>Ultimate</strong> – systemowa dominacja</li>
+      </ul>
+      <p>
+        AI nie „oszukuje” – różnice wynikają z jakości decyzji i planowania.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>⚙️ Mechaniki</h2>
+      <ul>
+        <li>Zmienny rozmiar planszy (do 15×15)</li>
+        <li>Tickrate – presja czasu na ruch</li>
+        <li>Pionki z HP i regeneracją</li>
+        <li>Przeszkody losowe</li>
+        <li>Pełna skalowalność parametrów</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="card">
+    <h2>▶️ Jak uruchomić</h2>
+    <pre>
+python game.py
+    </pre>
+    <p>
+      Wymagania:
+      <ul>
+        <li>Python 3.10+</li>
+        <li>Biblioteka standardowa (Tkinter)</li>
+      </ul>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>📦 Repozytorium</h2>
+    <p>
+      Pełny kod źródłowy, historia zmian i dokumentacja dostępne są na GitHubie.
+    </p>
+
+    <a class="button" href="https://github.com/TWOJ_LOGIN/pionki-vs-ai">
+      Zobacz repozytorium
+    </a>
+
+    <a class="button secondary" href="#">
+      Pobierz grę (opcjonalnie .exe)
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 · Projekt hobbystyczny · Python · GitHub Pages
+</footer>
+
+</body>
+</html>
